@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio & Link Pribadi</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      /* Latar belakang gradasi cerah bernuansa mewah (Peach, Rose Gold & Cream) */
+      background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 40%, #fef3c7 100%);
+      color: #1e293b;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 440px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 2px solid #ffffff;
+      border-radius: 24px;
+      padding: 40px 28px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(225, 29, 72, 0.12);
+      backdrop-filter: blur(12px);
+    }
+
+    /* Bingkai foto profil dengan gradasi emas & rose */
+    .avatar-wrapper {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 18px;
+      padding: 4px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #f43f5e, #f59e0b);
+      box-shadow: 0 10px 25px rgba(244, 63, 94, 0.25);
+    }
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      background-color: #ffe4e6;
+      display: block;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+
+    .role {
+      font-size: 14px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #e11d48, #d97706);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 14px;
+    }
+
+    .bio {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #475569;
+      margin-bottom: 28px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .link-btn {
+      display: block;
+      text-decoration: none;
+      background: #ffffff;
+      color: #1e293b;
+      padding: 15px 20px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 600;
+      border: 1px solid #fecdd3;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      transition: all 0.25s ease;
+    }
+
+    .link-btn:hover {
+      background: linear-gradient(135deg, #f43f5e, #fb7185);
+      color: #ffffff;
+      border-color: transparent;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(244, 63, 94, 0.25);
+    }
+
+    .copy-btn {
+      background: #fffbeb;
+      border: 1px solid #fcd34d;
+      color: #b45309;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 100%;
+    }
+
+    .copy-btn:hover {
+      background: #fef3c7;
+      transform: translateY(-1px);
+    }
+
+    footer {
+      margin-top: 26px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <!-- Foto Profil Pribadi Anda -->
+    <div class="avatar-wrapper">
+      <img src="profil.jpeg" alt="Foto Profil Titin Jelita" class="avatar">
+    </div>
+
+    <!-- Nama, Peran, dan Deskripsi -->
+    <h1>Titin Jelita</h1>
+    <p class="role">Web Developer & Creative Designer</p>
+    <p class="bio">
+      Selamat datang di ruang digital saya! Temukan karya terbaru, portofolio, dan berbagai kanal media sosial saya di bawah ini.
+    </p>
+
+    <!-- Daftar Tautan Utama -->
+    <div class="links">
+      <a href="https://github.com" target="_blank" class="link-btn">💻 Profil GitHub</a>
+      <a href="https://linkedin.com" target="_blank" class="link-btn">💼 LinkedIn</a>
+      <a href="https://instagram.com" target="_blank" class="link-btn">📸 Instagram</a>
+      <a href="#proyek" onclick="alert('Halaman detail proyek sedang disiapkan!')" class="link-btn">✨ Lihat Karya Saya</a>
+    </div>
+
+    <!-- Tombol Salin Email -->
+    <button class="copy-btn" onclick="salinEmail()">✉️ Salin Alamat Email Saya</button>
+
+    <footer>
+      © 2026 • Dibuat & di-deploy dengan Vercel
+    </footer>
+  </main>
+
+  <script>
+    function salinEmail() {
+      const emailSaya = "emailanda@contoh.com"; // Ganti dengan email asli Anda
+      navigator.clipboard.writeText(emailSaya).then(() => {
+        alert("Alamat email (" + emailSaya + ") berhasil disalin!");
+      });
+    }
+  </script>
+
+</body>
+</html>
